@@ -20,7 +20,7 @@
 namespace framework {
 
 /** name of the project, used in debug/syslog messages */
-const std::string project_name = "framework";
+const std::string project_name = "keymouse";
 
 /** config file location */
 std::string config_file = "cfg/default.cfg";
