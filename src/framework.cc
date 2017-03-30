@@ -6,7 +6,19 @@
  * Simple C++ project framework for small projects and quick prototyping
  *
  * Copyright (c) 2017 Zoltan Toth <ztoth AT thetothfamily DOT net>
- * All rights reserved.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>
  *
  *------------------------------------------------------------------------------
  */
@@ -14,6 +26,8 @@
 #include <sstream>
 #include <iterator>
 #include <ios>
+#include <unistd.h>
+#include <pwd.h>
 
 #include "framework.h"
 
@@ -23,7 +37,7 @@ namespace framework {
 const std::string project_name = "keymouse";
 
 /** config file location */
-std::string config_file = "cfg/default.cfg";
+std::string config_file = "/home/" + std::string(getpwuid(geteuid())->pw_name) + "/.keymouse.cfg";
 
 /** debug level */
 debug_level_en debug_level = DEBUG_LEVEL_NORMAL;

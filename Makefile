@@ -9,7 +9,7 @@ OBJDIR   = $(BINDIR)
 
 # compiler and linker
 CC       = g++
-LIBS     = -lm -lpthread
+LIBS     = -lm -lpthread -lX11 -lXtst
 INCLUDES = -I$(SRCDIR)
 
 # check target

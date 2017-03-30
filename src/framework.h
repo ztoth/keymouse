@@ -6,7 +6,19 @@
  * Simple C++ project framework for small projects and quick prototyping
  *
  * Copyright (c) 2017 Zoltan Toth <ztoth AT thetothfamily DOT net>
- * All rights reserved.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>
  *
  *------------------------------------------------------------------------------
  */
@@ -27,6 +39,7 @@ typedef enum return_code {
     RC_OK,
     RC_MAIN_SIGNAL_ERROR,
     RC_MAIN_LOGFILE_ERROR,
+    RC_MAIN_DISPLAY_ERROR,
     RC_CONFIG_FILE_NOT_FOUND,
     RC_CONFIG_MISSING_SECTION
 } return_code_en;

@@ -1,1 +1,21 @@
-Project keymouse
+Mouse emulation with keyboard in X11
+
+Use your keyboard to emulate mouse events, such as mouse movement, left click
+and paste (i.e. middle click).
+
+The project supports basic JSON-style configuration, as follows:
+  1. "keymouse" block
+     - trigger                 enable/disable mouse emulation with this key
+     - up, left, down, right   these keys are used to move the mouse around
+     - click                   left-click key
+     - paste                   this key represents the middle mousebutton
+     - speed                   number of pixels to move at each keystroke
+     - sleep                   wait time (in usec) between sampling keystrokes
+     - slow                    slow down mouse movement by holding down this key
+     - numlock                 set it to true if your numlock is on
+
+Use names from /usr/include/X11/keysymdef.h for the keys, without the "XK_"
+prefix. See cfg/default.cfg for an example configuration. The default location
+of the configuration file is ~/.keymouse.cfg.
+
+TODO: use xcd library instead of xlib
